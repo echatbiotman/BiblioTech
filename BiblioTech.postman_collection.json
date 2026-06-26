@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "b3e34b95-a131-4a11-8557-0a1eb9c0a6b7",
+		"name": "BiblioTech API",
+		"description": "Collection de tests pour l'API de la bibliothèque BiblioTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1- Ajouter un livre (POST)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titre\": \"L'Alchimiste\",\n  \"auteur\": \"Paulo Coelho\",\n  \"categorie\": \"Romans\",\n  \"annee_publication\": 1988,\n  \"disponible\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/livres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2- Afficher tous les livres (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3- Afficher un livre par ID (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livres/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4- Modifier un livre (PUT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titre\": \"L'Alchimiste\",\n  \"auteur\": \"Paulo Coelho\",\n  \"categorie\": \"Romans\",\n  \"annee_publication\": 1988,\n  \"disponible\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/livres/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5- Supprimer un livre (DELETE)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livres/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
